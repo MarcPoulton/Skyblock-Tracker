@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0a0f0d 0%, #09090b 50%, #0a0a0c 100%);
+  color: var(--color-foreground);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.3);
+}
