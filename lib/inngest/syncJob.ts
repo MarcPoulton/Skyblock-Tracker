@@ -6,8 +6,7 @@ import { syncAllPlayers } from "@/lib/sync/syncPlayer";
 import { cleanupExpiredCache } from "@/lib/hypixel/client";
 
 export const syncJob = inngest.createFunction(
-  { id: "skyblock-sync" },
-  { cron: "0 * * * *" }, // Every hour
+  { id: "skyblock-sync", triggers: [{ cron: "0 * * * *" }] }, // Every hour
   async ({ step }) => {
     const jobId = crypto.randomUUID();
 
